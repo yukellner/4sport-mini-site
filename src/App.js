@@ -27,7 +27,7 @@ function App() {
             {/* <Route path='/trips' element={<Trips />} /> */}
             {/* <Route path='/host' element={<Host />} /> */}
             {/* <Route path='/host-your-home' element={<HostYourHome />} /> */}
-            {/* <Route path='/' element={<Home />} /> */}
+            <Route path='/' element={<Home />} />
           </Routes>
           {/* <LoginSignup/> */}
         </main>
