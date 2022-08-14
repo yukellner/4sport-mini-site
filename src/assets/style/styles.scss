@@ -1,4 +1,10 @@
 // SETUP
 @import 'setup/variables';
+@import '/src/assets/style/components/app-header';
+
+@import 'basics/helpers';
+@import 'setup/sizing.scss';
+@import '../style/pages/home.scss';
+@import '../style/components/enrollment.scss';
 
 

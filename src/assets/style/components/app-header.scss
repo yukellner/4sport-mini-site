@@ -1,0 +1,29 @@
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    height: 4rem;
+    align-items: center;
+
+}
+
+.logo {
+    li {
+        height: 4rem;
+
+        img {
+            height: 4rem;
+        }
+    }
+}
+
+.navbar {
+    padding: 1rem;
+
+    ul {
+        display: flex;
+
+        li {
+            margin-left: 1rem;
+        }
+    }
+}

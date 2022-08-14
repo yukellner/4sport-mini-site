@@ -1,3 +1,4 @@
+import { Enrollment } from "../cmps/enrollment"
 
 
 export const Home = () => {
@@ -5,9 +6,8 @@ export const Home = () => {
 
 
     return (
-        <div >
-            home
-            
+        <div className="main-home">
+            <Enrollment/>
         </div >
     )
 }
