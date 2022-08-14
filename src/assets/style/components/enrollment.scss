@@ -1,6 +1,19 @@
 .main-enrollment{
     justify-content: center;
+    align-items: center;
     padding: 10rem;
     display: flex;
+    flex-direction: column;
+    background-image: url("../../../imgs/background.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    h1{
+        padding: 1rem;
+        color: white;
+    }
+}
 
+button{
+    width: 16rem;
+    height: 4rem;
 }

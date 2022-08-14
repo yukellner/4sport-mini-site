@@ -9,6 +9,7 @@ export const Enrollment = () => {
 
     return (
         <div className="main-enrollment">
+            <h1>ההרשמה בעיצומה</h1>
             <Button variant="contained">הרשמה</Button>
         </div>
 
