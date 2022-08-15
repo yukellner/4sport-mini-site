@@ -22,10 +22,11 @@ function App() {
 
 
 
-  const [eventObj, setEventObj] = useState('hi')
+  const [eventObj, setEventObj] = useState(null)
 
   useEffect(() => {
     getJsonFromApi()
+   
   }, [])
 
   const getJsonFromApi = async () => {
@@ -44,10 +45,13 @@ function App() {
       console.error(error);
     }
   }
-
+  
   // console.log('apiu',eventObj)
-
+  
   if (!eventObj) return
+  
+  
+ 
 
   return (
     <BrowserRouter >
@@ -64,7 +68,7 @@ function App() {
           <div className='left'></div>
 
           <div className='content'>
-            <AppHeader />
+            <AppHeader eventObj={eventObj}/>
             <Routes>
               {/* <Route path='/stay/:stayId' element={<StayDetails />} /> */}
               <Route path='/home' element={<Home eventObj={eventObj} />} />

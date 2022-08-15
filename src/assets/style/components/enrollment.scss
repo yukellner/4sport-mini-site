@@ -4,7 +4,7 @@
     padding: 10rem;
     display: flex;
     flex-direction: column;
-    background-image: url("../../../imgs/background.jpeg");
+    background-image: var(--coverImage);
     background-repeat: no-repeat;
     background-size: cover;
     h1{
