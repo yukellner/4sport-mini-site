@@ -14,7 +14,6 @@ export const Enrollment = ({eventObj}) => {
         <div >
 
             <EnrollmentTable  eventObj={eventObj}/>
-            <Sponsers eventObj={eventObj}/>
 
            
 

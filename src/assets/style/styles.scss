@@ -1,5 +1,6 @@
 // SETUP
 @import 'setup/variables';
+@import '../fonts/fonts';
 @import '/src/assets/style/components/app-header';
 
 @import 'basics/helpers';
@@ -10,3 +11,4 @@
 @import '../style/components/sponsers.scss';
 @import '../style/components/countdown.scss';
 @import '../style/pages/enrollment.scss';
+@import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap');

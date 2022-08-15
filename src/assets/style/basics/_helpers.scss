@@ -3,12 +3,20 @@
     margin: 0;
     box-sizing: border-box;
     text-decoration: none;
+    a{
+        all: unset;
+        text-decoration: none; /* no underline */
+
+    }
 
 }
 
 *{
     
     outline: 0.5px solid red !important;
+    font-family: General-Font;
+
+    // font-family: General-Font;
 }
 
 body{

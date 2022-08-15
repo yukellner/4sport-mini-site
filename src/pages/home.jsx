@@ -13,7 +13,6 @@ export const Home = ({eventObj}) => {
     return (
         <div className="main-home">
             <EnrollmentCmp/>
-            <Sponsers eventObj={eventObj}/>
 
         </div >
     )
