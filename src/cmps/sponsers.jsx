@@ -10,7 +10,7 @@ export const Sponsers = ({eventObj}) => {
     return (
         <div className="sponsers-container">
             {eventObj.sponsors.map(sponser =>
-                <SponserCard sponser={sponser} />
+                <SponserCard key={sponser.description} sponser={sponser} />
             )}
         </div >
     )

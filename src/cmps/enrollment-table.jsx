@@ -13,63 +13,87 @@ export const EnrollmentTable = ({ eventObj }) => {
 
     return (
         <div className="enrollment-table">
-            <h1>טבלת מחירים</h1>
-            <table className="top-table">
-                <thead>
+            <div className="container">
 
+                <h1>טבלת מחירים</h1>
+                <table className="top-table">
+                    <thead>
+                        <tr>
+                            <th>
+                                <div>
+                                    הרשמה מאוחרת עד תאריך
+                                </div>
+                                <div>
+                                    {eventObj.priceDates[2]}
+                                </div>
+                            </th>
+                            <th>
+                                <div>
+                                    הרשמה רגילה עד תאריך
+                                </div>
+                                <div>
+                                    {eventObj.priceDates[1]}
+                                </div>
+                            </th>
+                            <th>
+                                <div>
+                                    הרשמה מוקדמת עד תאריך
+                                </div>
+                                <div>
+                                    {eventObj.priceDates[0]}
+                                </div>
 
-                    <tr>
-                        <th>הרשמה מאוחרת</th>
-                        <th>הרשמה</th>
-                        <th>הרשמה מוקדמת</th>
-                        <th rowSpan="2">מקצה</th>
-                    </tr>
-
-                    <tr>
-                        <th>{eventObj.priceDates[2]}</th>
-                        <th>{eventObj.priceDates[1]}</th>
-                        <th>{eventObj.priceDates[0]}</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {eventObj.heats.map(heat =>
-                        <tr key={heat.Rolls}>
-                            <td>{heat.prices[2]}₪</td>
-                            <td>{heat.prices[1]}₪</td>
-                            <td>{heat.prices[0]}₪</td>
-                            <td>{heat.description}</td>
+                            </th>
+                            <th>מקצה</th>
                         </tr>
 
-                    )}
-                </tbody>
 
-            </table>
-            <h1>זמני זינוק</h1>
-            <table className="bottom-table">
-                <thead>
-                    <tr>
-                        <th>מגיל</th>
-                        <th>זמן זינוק</th>
-                        <th>מקצה</th>
-                    </tr>
-                </thead>
-                <tbody>
+                    </thead>
+                    <tbody>
+                        {eventObj.heats.map(heat =>
+                            <tr key={heat.Rolls}>
+                                <td>{heat.prices[2]}₪</td>
+                                <td>{heat.prices[1]}₪</td>
+                                <td>{heat.prices[0]}₪</td>
+                                <td>{heat.description}</td>
+                            </tr>
 
-                    {eventObj.heats.map(heat =>
+                        )}
+                    </tbody>
+
+                </table>
+            </div>
+            <div className="container">
+
+                <h1>זמני זינוק ומחירים</h1>
+                <table className="bottom-table">
+                    <thead>
                         <tr>
-                            <td>{heat.minAge}</td>
-                            <td>{heat.startHeat}</td>
-                            <td>{heat.description}</td>
-                        </tr>)}
-                </tbody>
-            </table>
+                            <th>מגיל</th>
+                            <th>זמן זינוק</th>
+                            <th>מקצה</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        {eventObj.heats.map(heat =>
+                            <tr key={heat.Rolls}>
+                                <td>{heat.minAge}</td>
+                                <td>{heat.startHeat}</td>
+                                <td>{heat.description}</td>
+                            </tr>)}
+                    </tbody>
+                </table>
+            </div>
+
+            <Button href={eventObj.participantsListUrl} variant="contained">לחץ להרשמה</Button>
+
             <p>
                 מה כוללת ההרשמה שלי?
-                <br/>
+                <br />
                 ערכת השתתפות, סידורי אבטחה, משטרה ורפואה, מדידת מסלול וזמן (מקצה המיני מרתון וה-5 ק"מ לא מדידים).
-                <br/>
-                לתשומת ליבכם: ההרשמה אינה כוללת חולצת מרתון. 
+                <br />
+                לתשומת ליבכם: ההרשמה אינה כוללת חולצת מרתון.
                 <br />
                 לקבלת חולצת מרתון איכותית יש לציין זאת בהליך ההרשמה.
                 <br />

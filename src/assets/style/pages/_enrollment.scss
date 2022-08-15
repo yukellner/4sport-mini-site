@@ -1,10 +1,26 @@
-.enrollment-table{
+.enrollment-table {
     text-align: center;
-    table{
 
-        margin: 0 auto;
+    h1:first-child{
+        // margin-top: 10rem;
     }
-    p{
+    .container{
+        margin-top: 8rem;
+    }
+
+    table {
+        margin: 0 auto;
+        border-collapse: collapse;
+        td,tr,th{
+            border: 1px solid lightgray;
+
+        }
+        th{
+            background-color: lightgrey;
+        }
+    }
+
+    p {
         padding: 5rem;
         direction: rtl;
         text-align: right;
