@@ -73,7 +73,7 @@ function App() {
             <AppHeader eventObj={eventObj}/>
             <Routes>
               <Route path='/contact' element={<Contact />} />
-              <Route path='/enrollment/:description' element={<Enrollment />} />
+              <Route path='/enrollment/:description' element={<Enrollment eventObj={eventObj}/>} />
               <Route path='/details' element={<Details />} />
               <Route path='/maps' element={<Maps />} />
               <Route path='/' element={<Home eventObj={eventObj}/>} />

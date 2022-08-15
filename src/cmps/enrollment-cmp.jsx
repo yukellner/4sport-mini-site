@@ -8,7 +8,7 @@ export const EnrollmentCmp = () => {
 
 
     return (
-        <div className="main-enrollment">
+        <div className="main-enrollment vh-80">
             <h1>ההרשמה בעיצומה</h1>
             <Button variant="contained">הרשמה</Button>
         </div>
