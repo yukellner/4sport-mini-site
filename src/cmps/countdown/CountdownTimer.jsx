@@ -15,10 +15,7 @@ const ExpiredNotice = () => {
 const ShowCounter = ({ days, hours, minutes, seconds }) => {
   return (
     <div className="show-counter">
-      <div className="top">
         <DateTimeDisplay value={days} type={'ימים'} isDanger={days <= 3} />
-      </div>
-      <div className="bottom">
         {/* <p>:</p> */}
         <DateTimeDisplay value={hours} type={'שעות'} isDanger={false} />
         {/* <p>:</p> */}
@@ -26,7 +23,6 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
         {/* <p>:</p> */}
         <DateTimeDisplay value={seconds} type={'שניות'} isDanger={false} />
       </div>
-    </div>
   );
 };
 

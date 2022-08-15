@@ -1,9 +1,13 @@
 import { useEffect } from "react"
 import { NavLink } from "react-router-dom"
+import CountdownTimer from "./countdown/CountdownTimer";
 
 
 export const AppHeader = ({ eventObj }) => {
 
+    // var NOW_IN_MS = new Date().getTime();
+    var date = new Date("11/21/2022 16:00:00"); // some mock date
+    var DATE_IN_MS = date.getTime();
     useEffect(() => {
         updateVaribles()
     }, [])
@@ -37,6 +41,9 @@ export const AppHeader = ({ eventObj }) => {
                     <li><NavLink to='/'>בית</NavLink></li>
                 </ul>
             </dir>
+            <div className='countdown-container'>
+                <CountdownTimer targetDate={DATE_IN_MS} />
+            </div>
         </header >
     )
 }

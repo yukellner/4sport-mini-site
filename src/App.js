@@ -16,9 +16,7 @@ import { Maps } from './pages/maps';
 
 function App() {
 
-  var date = new Date("11/21/2022 16:00:00"); // some mock date
-  var DATE_IN_MS = date.getTime();
-  const NOW_IN_MS = new Date().getTime();
+  
 
   // const dateTimeAfterThreeDays = NOW_IN_MS + DATE_IN_MS;
   //https://blog.greenroots.info/how-to-create-a-countdown-timer-using-react-hooks
@@ -88,15 +86,13 @@ function App() {
         <AppFooterMobile/> */}
       </div>
 
-      <div className='counter-bc'>
+      {/* <div className='counter-bc'>
 
 
-      </div>
+      </div> */}
 
 
-      <div className='countdown-container'>
-        <CountdownTimer targetDate={DATE_IN_MS} />
-      </div>
+     
     </BrowserRouter>
 
 
