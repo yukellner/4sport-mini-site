@@ -4,26 +4,26 @@ import { SponserCard } from "../cmps/sponser-card";
 import { Sponsers } from "../cmps/sponsers";
 
 
-export const Home = () => {
+export const Home = ({eventObj}) => {
 
     useEffect(() => {
-        printJSON()
+        // printJSON()
       }, [])
 
 
-    const printJSON = async () =>  {
-        console.log('im here')
-        const response = await fetch('https://www.4sport-live.com/miniSite/eventData/?comp=3432');
-        var responseJson = await response.json();
-        console.log(Object(responseJson));
-    }
+    // const printJSON = async () =>  {
+    //     console.log('im here')
+    //     const response = await fetch('https://www.4sport-live.com/miniSite/eventData/?comp=3432');
+    //     var responseJson = await response.json();
+    //     console.log(Object(responseJson));
+    // }
 
 
 
     return (
         <div className="main-home">
             <Enrollment/>
-            <Sponsers/>
+            <Sponsers eventObj={eventObj}/>
 
         </div >
     )

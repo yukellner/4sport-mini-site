@@ -9,9 +9,9 @@ export const SponserCard = ({ sponser }) => {
     return (
         <div className="sponser-card">
             <a href={sponser.link}>
-                <img src={sponser.imgSrc} />
+                <img src={sponser.logoUrl} />
             </a>
-            {sponser.name}
+            {sponser.description}
         </div >
     )
 }
