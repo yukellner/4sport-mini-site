@@ -7,6 +7,10 @@ import { Helmet } from "react-helmet"
 import { AppHeader } from './cmps/app-header';
 import { Home } from './pages/home';
 import CountdownTimer from './cmps/countdown/CountdownTimer';
+import { Contact } from './pages/contact';
+import { Enrollment } from './pages/enrollment';
+import { Details } from './pages/details';
+import { Maps } from './pages/maps';
 // import axios from 'axios';
 
 
@@ -70,12 +74,10 @@ function App() {
           <div className='content'>
             <AppHeader eventObj={eventObj}/>
             <Routes>
-              {/* <Route path='/stay/:stayId' element={<StayDetails />} /> */}
-              <Route path='/home' element={<Home eventObj={eventObj} />} />
-              {/* <Route path='/explore' element={<Explore />} /> */}
-              {/* <Route path='/trips' element={<Trips />} /> */}
-              {/* <Route path='/host' element={<Host />} /> */}
-              {/* <Route path='/host-your-home' element={<HostYourHome />} /> */}
+              <Route path='/contact' element={<Contact />} />
+              <Route path='/enrollment/:description' element={<Enrollment />} />
+              <Route path='/details' element={<Details />} />
+              <Route path='/maps' element={<Maps />} />
               <Route path='/' element={<Home eventObj={eventObj}/>} />
             </Routes>
             {/* <LoginSignup/> */}

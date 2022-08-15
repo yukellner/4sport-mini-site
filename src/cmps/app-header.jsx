@@ -21,7 +21,7 @@ export const AppHeader = ({ eventObj }) => {
 
     return (
         <header id="main-header" className="main-header">
-            <NavLink to='/home'>
+            <NavLink to='/'>
                 <div className="logo">
                     <li>
                         <img src={eventObj.logo} />
@@ -30,11 +30,11 @@ export const AppHeader = ({ eventObj }) => {
             </NavLink>
             <dir className="navbar">
                 <ul>
-                    <li>צרו קשר</li>
-                    <li>מפות ומסלולים</li>
-                    <li>מידע</li>
-                    <li>הרשמה</li>
-                    <li>בית</li>
+                    <li><NavLink to='/contact'>צור קשר</NavLink></li>
+                    <li><NavLink to='/maps'>מפות ומסלולים</NavLink></li>
+                    <li><NavLink to='/details'>מידע</NavLink></li>
+                    <li><NavLink to={`/enrollment/${eventObj.description}`}>הרשמה</NavLink></li>
+                    <li><NavLink to='/'>בית</NavLink></li>
                 </ul>
             </dir>
         </header >
