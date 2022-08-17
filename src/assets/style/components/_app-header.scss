@@ -5,7 +5,7 @@
     align-items: center;
     background-color: var(--secondaryColor);
     color: white;
-    margin-right: 2rem;
+    padding-right: 2rem;
 
     a {
         cursor: pointer;
@@ -22,6 +22,8 @@
             border: 1px solid white;
             border-radius: 1rem;
             margin: 1rem;
+            box-shadow: 0 6px 16px rgb(0 0 0 / 12%);
+            border: 1px solid #ddd;
         }
     }
 }
