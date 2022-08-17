@@ -13,18 +13,31 @@
 
 *{
     
-    // outline: 0.5px solid red !important;
+    outline: 0.5px solid red !important;
     font-family: General-Font;
 
     // font-family: General-Font;
 }
 
 body{
-    background-color: var(--backgroundColor);
+    // background-color: var(--backgroundColor);
+    background-color: var(--secondaryColor);
+
     color: var(--fontColor);
 }
 
 .vh-80{
     height: 80vh
+
+}
+
+.sign-btn{
+    margin-top: 5rem;
+    background-color: var(--secondaryColor);
+}
+.sign-btn-oposite{
+    background-color: white !important;
+    color: var(--secondaryColor) !important;
+    // margin: 0.5rem !important;
 
 }

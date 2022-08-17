@@ -85,8 +85,9 @@ export const EnrollmentTable = ({ eventObj }) => {
                     </tbody>
                 </table>
             </div>
-
-            <Button href={eventObj.participantsListUrl} variant="contained">לחץ להרשמה</Button>
+            <div>
+                <Button className="sign-btn" href={eventObj.participantsListUrl} variant="contained">לחץ להרשמה</Button>
+            </div>
 
             <p>
                 מה כוללת ההרשמה שלי?

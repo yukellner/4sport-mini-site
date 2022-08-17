@@ -1,3 +1,4 @@
+import { Button } from "@mui/material";
 import { useEffect } from "react"
 import { NavLink } from "react-router-dom"
 import CountdownTimer from "./countdown/CountdownTimer";
@@ -16,7 +17,7 @@ export const AppHeader = ({ eventObj }) => {
     const updateVaribles = () => {
         document.documentElement.style.setProperty('--backgroundColor', eventObj.backgroundColor);
         document.documentElement.style.setProperty('--fontColor', eventObj.foregroundColor);
-        document.documentElement.style.setProperty('--secondaryColor', eventObj.secondaryColor);
+        // document.documentElement.style.setProperty('--secondaryColor', eventObj.secondaryColor);
         document.documentElement.style.setProperty(`--coverImage`, `url(${eventObj.coverImages[0]})`);
     }
 
@@ -42,7 +43,10 @@ export const AppHeader = ({ eventObj }) => {
                 </ul>
             </dir>
             <div className='countdown-container'>
-                <CountdownTimer targetDate={DATE_IN_MS} />
+                <div>
+                    <Button className='sign-btn-oposite' href={eventObj.participantsListUrl} variant="contained">לחץ להרשמה</Button>
+                    <CountdownTimer targetDate={DATE_IN_MS} />
+                </div>
             </div>
         </header >
     )

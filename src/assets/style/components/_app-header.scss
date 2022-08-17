@@ -3,8 +3,11 @@
     justify-content: space-between;
     height: 4rem;
     align-items: center;
+    background-color: var(--secondaryColor);
+    color: white;
+    margin-right: 2rem;
 
-    a{
+    a {
         cursor: pointer;
     }
 
@@ -15,13 +18,17 @@
         height: 4rem;
 
         img {
-            height: 4rem;
+            height: 7rem;
+            border: 1px solid white;
+            border-radius: 1rem;
+            margin: 1rem;
         }
     }
 }
 
 .navbar {
     padding: 1rem 0 1rem 0;
+
     ul {
         display: flex;
 
