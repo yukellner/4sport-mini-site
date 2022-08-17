@@ -1,17 +1,38 @@
 import { Button } from "@mui/material";
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { NavLink } from "react-router-dom"
 import CountdownTimer from "./countdown/CountdownTimer";
 
 
 export const AppHeader = ({ eventObj }) => {
 
+    const [timerIsShown, setTimerIsShownd] = useState(true)
+
+
     // var NOW_IN_MS = new Date().getTime();
     var date = new Date("11/21/2022 16:00:00"); // some mock date
     var DATE_IN_MS = date.getTime();
     useEffect(() => {
         updateVaribles()
+        window.addEventListener('scroll', scrollEv, { passive: true });
+
+        return () => {
+            window.removeEventListener('scroll', scrollEv, { passive: true });
+        }
+
     }, [])
+
+    const scrollEv = () => {
+        console.log('scroll event')
+        const scrollValue = document.documentElement.scrollTop
+
+        if (scrollValue > 100) {
+            setTimerIsShownd(false)
+                }
+        else if (scrollValue <= 100) {
+            setTimerIsShownd(true)
+        }
+    }
 
 
     const updateVaribles = () => {
@@ -22,6 +43,7 @@ export const AppHeader = ({ eventObj }) => {
     }
 
 
+    // if(!timerIsShown) return
 
 
     return (
@@ -43,9 +65,10 @@ export const AppHeader = ({ eventObj }) => {
                 </ul>
             </dir>
             <div className='countdown-container'>
-                <div>
+                <div className="log-in-modal">
+                    <h1>{eventObj.date}</h1>
                     <Button className='sign-btn-oposite' href={eventObj.participantsListUrl} variant="contained">לחץ להרשמה</Button>
-                    <CountdownTimer targetDate={DATE_IN_MS} />
+                    {timerIsShown && <CountdownTimer targetDate={DATE_IN_MS} />}
                 </div>
             </div>
         </header >
