@@ -12,6 +12,7 @@ import { Enrollment } from './pages/enrollment';
 import { Details } from './pages/details';
 import { Maps } from './pages/maps';
 import { Sponsers } from './cmps/sponsers';
+import { AppFooter } from './cmps/app-footer';
 // import axios from 'axios';
 
 
@@ -84,6 +85,7 @@ function App() {
           <div className='right'></div>
         </main>
         <Sponsers eventObj={eventObj}/>
+        <AppFooter/>
 
         {/* <AppFooter />
         <AppFooterMobile/> */}
