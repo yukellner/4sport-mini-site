@@ -6,8 +6,8 @@ import { useCountdown } from './useCountdown';
 const ExpiredNotice = () => {
   return (
     <div className="expired-notice">
-      <span>Expired!!!</span>
-      <p>Please select a future date and time.</p>
+      
+      <p>ההרשמה הסתיימה</p>
     </div>
   );
 };
