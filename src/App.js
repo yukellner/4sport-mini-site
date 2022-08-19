@@ -4,15 +4,15 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
 import { Helmet } from "react-helmet"
-import { AppHeader } from './cmps/app-header';
-import { Home } from './pages/home';
+import { AppHeader } from './cmps/AppHeader';
+import { Home } from './pages/Home';
 import CountdownTimer from './cmps/countdown/CountdownTimer';
-import { Contact } from './pages/contact';
-import { Enrollment } from './pages/enrollment';
-import { Details } from './pages/details';
-import { Maps } from './pages/maps';
-import { Sponsers } from './cmps/sponsers';
-import { AppFooter } from './cmps/app-footer';
+import { Contact } from './pages/Contact';
+import { Enrollment } from './pages/Enrollment';
+import { Details } from './pages/Details';
+import { Maps } from './pages/Maps';
+import { Sponsors } from './cmps/Sponsors';
+import { AppFooter } from './cmps/AppFooter';
 // import axios from 'axios';
 
 
@@ -84,7 +84,7 @@ function App() {
           </div>
           <div className='right'></div>
         </main>
-        <Sponsers eventObj={eventObj}/>
+        <Sponsors eventObj={eventObj}/>
         <AppFooter/>
 
         {/* <AppFooter />

@@ -1,10 +1,7 @@
-import { Button } from "@mui/material"
-import { NavLink } from "react-router-dom"
+import {Button} from "@mui/material"
 
 
-export const HeatBox = ({ heat, eventObj }) => {
-
-
+export const HeatBox = ({heat, eventObj}) => {
 
 
     return (
@@ -15,7 +12,8 @@ export const HeatBox = ({ heat, eventObj }) => {
                     <div>
                         <h3>{heat.description}</h3>
                         <h3>מגיל {heat.minAge} עד גיל {heat.maxAge}</h3>
-                        <Button className='sign-btn' href={eventObj.participantsListUrl} variant="contained">לחץ להרשמה</Button>
+                        <Button className='sign-btn' href={eventObj.participantsListUrl} variant="contained">לחץ
+                            להרשמה</Button>
 
                     </div>
                 </div>
@@ -26,7 +24,7 @@ export const HeatBox = ({ heat, eventObj }) => {
                         </span>
                     </div>
 
-                </div >
+                </div>
             </div>
         </div>
     )

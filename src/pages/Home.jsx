@@ -1,7 +1,6 @@
 import { useEffect } from "react";
-import { EnrollmentCmp } from "../cmps/enrollment-cmp"
-import { Heats } from "../cmps/heats";
-import { Sponsers } from "../cmps/sponsers";
+import { EnrollmentCmp } from "../cmps/EnrollmentCmp"
+import { Heats } from "../cmps/Heats";
 
 
 export const Home = ({eventObj}) => {

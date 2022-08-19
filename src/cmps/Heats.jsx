@@ -1,10 +1,7 @@
-import { NavLink } from "react-router-dom"
-import { HeatBox } from "./heat-box"
+import {HeatBox} from "./HeatBox"
 
 
-export const Heats = ({ eventObj }) => {
-
-
+export const Heats = ({eventObj}) => {
 
 
     return (
@@ -12,15 +9,15 @@ export const Heats = ({ eventObj }) => {
             <h1 className="header-large">המקצים</h1>
             <div className="heats-container">
                 {eventObj.heats.map(heat =>
-                    <HeatBox key={heat.description} heat={heat} eventObj={eventObj} />
+                    <HeatBox key={heat.description} heat={heat} eventObj={eventObj}/>
                 )}
                 {eventObj.heats.map(heat =>
-                    <HeatBox key={heat.description} heat={heat} eventObj={eventObj} />
+                    <HeatBox key={heat.description} heat={heat} eventObj={eventObj}/>
                 )}
-               
-               
+
+
             </div>
-            
+
         </div>
 
 

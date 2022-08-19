@@ -1,8 +1,8 @@
-import { useEffect } from "react"
-import { SponserCard } from "./sponser-card"
+import {useEffect} from "react"
+import {SponserCard} from "./SponserCard"
 
 
-export const Sponsers = ({ eventObj }) => {
+export const Sponsors = ({eventObj}) => {
 
     useEffect(() => {
     }, [])
@@ -12,9 +12,9 @@ export const Sponsers = ({ eventObj }) => {
             <h1 className="header-large">נותני החסות</h1>
             <div className="sponsers-container">
                 {eventObj.sponsors.map(sponser =>
-                    <SponserCard key={sponser.description} sponser={sponser} />
+                    <SponserCard key={sponser.description} sponser={sponser}/>
                 )}
-            </div >
+            </div>
         </div>
     )
 }

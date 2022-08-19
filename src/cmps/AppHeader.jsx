@@ -1,10 +1,10 @@
-import { Button } from "@mui/material";
-import { useEffect, useState } from "react"
-import { NavLink } from "react-router-dom"
+import {Button} from "@mui/material";
+import {useEffect, useState} from "react"
+import {NavLink} from "react-router-dom"
 import CountdownTimer from "./countdown/CountdownTimer";
 
 
-export const AppHeader = ({ eventObj }) => {
+export const AppHeader = ({eventObj}) => {
 
     const [timerIsShown, setTimerIsShownd] = useState(true)
 
@@ -16,10 +16,10 @@ export const AppHeader = ({ eventObj }) => {
 
     useEffect(() => {
         updateVaribles()
-        window.addEventListener('scroll', scrollEv, { passive: true });
+        window.addEventListener('scroll', scrollEv, {passive: true});
 
         return () => {
-            window.removeEventListener('scroll', scrollEv, { passive: true });
+            window.removeEventListener('scroll', scrollEv, {passive: true});
         }
 
     }, [])
@@ -30,8 +30,7 @@ export const AppHeader = ({ eventObj }) => {
 
         if (scrollValue > 100) {
             setTimerIsShownd(false)
-                }
-        else if (scrollValue <= 100) {
+        } else if (scrollValue <= 100) {
             setTimerIsShownd(true)
         }
     }
@@ -53,8 +52,8 @@ export const AppHeader = ({ eventObj }) => {
             <NavLink to='/'>
                 <div className="logo">
                     <li>
-                        <img src={eventObj.logo} />
-                    </li >
+                        <img src={eventObj.logo}/>
+                    </li>
                 </div>
             </NavLink>
             <dir className="navbar">
@@ -69,10 +68,11 @@ export const AppHeader = ({ eventObj }) => {
             <div className='countdown-container'>
                 <div className="log-in-modal">
                     <h1>{eventObj.date}</h1>
-                    <Button className='sign-btn-oposite' href={eventObj.participantsListUrl} variant="contained">לחץ להרשמה</Button>
-                    {timerIsShown && <CountdownTimer targetDate={DATE_IN_MS} />}
+                    <Button className='sign-btn-oposite' href={eventObj.participantsListUrl} variant="contained">לחץ
+                        להרשמה</Button>
+                    {timerIsShown && <CountdownTimer targetDate={DATE_IN_MS}/>}
                 </div>
             </div>
-        </header >
+        </header>
     )
 }
