@@ -14,6 +14,9 @@ export const Heats = ({ eventObj }) => {
                 {eventObj.heats.map(heat =>
                     <HeatBox key={heat.description} heat={heat} eventObj={eventObj} />
                 )}
+                {eventObj.heats.map(heat =>
+                    <HeatBox key={heat.description} heat={heat} eventObj={eventObj} />
+                )}
                
                
             </div>
