@@ -6,25 +6,17 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Helmet } from "react-helmet"
 import { AppHeader } from './components/header/AppHeader';
 import { Home } from './pages/home/Home';
-import CountdownTimer from './components/countdown/CountdownTimer';
 import { Contact } from './pages/contact/Contact';
 import { Enrollment } from './pages/enrollment/Enrollment';
 import { Details } from './pages/details/Details';
 import { Maps } from './pages/maps/Maps';
 import { Sponsors } from './components/sponsors/Sponsors';
 import { AppFooter } from './components/footer/AppFooter';
-// import axios from 'axios';
 
 
 function App() {
-
-
-
   // const dateTimeAfterThreeDays = NOW_IN_MS + DATE_IN_MS;
   //https://blog.greenroots.info/how-to-create-a-countdown-timer-using-react-hooks
-
-
-
 
   const [eventObj, setEventObj] = useState(null)
 
