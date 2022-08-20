@@ -1,4 +1,4 @@
-import {EnrollmentTable} from "../cmps/EnrollmentTable";
+import {EnrollmentTable} from "./enrollment-table/EnrollmentTable";
 
 
 export const Enrollment = ({eventObj}) => {

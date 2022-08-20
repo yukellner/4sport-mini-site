@@ -1,4 +1,4 @@
-export const SponserCard = ({sponser}) => {
+export const SponsorCard = ({sponser}) => {
 
 
     return (

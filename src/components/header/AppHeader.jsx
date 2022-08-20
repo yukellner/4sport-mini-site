@@ -1,7 +1,7 @@
 import {Button} from "@mui/material";
 import {useEffect, useState} from "react"
 import {NavLink} from "react-router-dom"
-import CountdownTimer from "./countdown/CountdownTimer";
+import CountdownTimer from "../countdown/CountdownTimer";
 
 
 export const AppHeader = ({eventObj}) => {

@@ -1,4 +1,4 @@
-import {HeatBox} from "./HeatBox"
+import {HeatBox} from "./components/HeatBox"
 
 
 export const Heats = ({eventObj}) => {

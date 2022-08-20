@@ -4,15 +4,15 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
 import { Helmet } from "react-helmet"
-import { AppHeader } from './cmps/AppHeader';
-import { Home } from './pages/Home';
-import CountdownTimer from './cmps/countdown/CountdownTimer';
-import { Contact } from './pages/Contact';
-import { Enrollment } from './pages/Enrollment';
-import { Details } from './pages/Details';
-import { Maps } from './pages/Maps';
-import { Sponsors } from './cmps/Sponsors';
-import { AppFooter } from './cmps/AppFooter';
+import { AppHeader } from './components/header/AppHeader';
+import { Home } from './pages/home/Home';
+import CountdownTimer from './components/countdown/CountdownTimer';
+import { Contact } from './pages/contact/Contact';
+import { Enrollment } from './pages/enrollment/Enrollment';
+import { Details } from './pages/details/Details';
+import { Maps } from './pages/maps/Maps';
+import { Sponsors } from './components/sponsors/Sponsors';
+import { AppFooter } from './components/footer/AppFooter';
 // import axios from 'axios';
 
 
