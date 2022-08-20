@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import './App.css';
-import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Helmet } from "react-helmet"
 import { AppHeader } from './components/header/AppHeader';
 import { Home } from './pages/home/Home';
@@ -18,7 +18,7 @@ import { AppFooter } from './components/footer/AppFooter';
 
 function App() {
 
-  
+
 
   // const dateTimeAfterThreeDays = NOW_IN_MS + DATE_IN_MS;
   //https://blog.greenroots.info/how-to-create-a-countdown-timer-using-react-hooks
@@ -30,14 +30,10 @@ function App() {
 
   useEffect(() => {
     getJsonFromApi()
-   
+
   }, [])
 
   const getJsonFromApi = async () => {
-    // const axios = require('axios');
-    // const res = await axios.get('https://www.4sport-live.com/miniSite/eventData/?comp=3432')
-    // console.log(res)
-
     //http://hinawi:3000/
     try {
       const response = await fetch('https://www.4sport-live.com/miniSite/eventData/?comp=3432');
@@ -49,13 +45,7 @@ function App() {
       console.error(error);
     }
   }
-  
-  // console.log('apiu',eventObj)
-  
   if (!eventObj) return
-  
-  
- 
 
   return (
     <BrowserRouter >
@@ -90,14 +80,6 @@ function App() {
         {/* <AppFooter />
         <AppFooterMobile/> */}
       </div>
-
-      {/* <div className='counter-bc'>
-
-
-      </div> */}
-
-
-     
     </BrowserRouter>
 
 
