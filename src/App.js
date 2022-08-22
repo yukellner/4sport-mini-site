@@ -2,42 +2,30 @@
 
 import React, { useEffect, useState } from 'react';
 import './App.css';
-import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Helmet } from "react-helmet"
-import { AppHeader } from './cmps/app-header';
-import { Home } from './pages/home';
-import CountdownTimer from './cmps/countdown/CountdownTimer';
-import { Contact } from './pages/contact';
-import { Enrollment } from './pages/enrollment';
-import { Details } from './pages/details';
-import { Maps } from './pages/maps';
-import { Sponsers } from './cmps/sponsers';
-import { AppFooter } from './cmps/app-footer';
-// import axios from 'axios';
+import { AppHeader } from './components/header/AppHeader';
+import { Home } from './pages/home/Home';
+import { Contact } from './pages/contact/Contact';
+import { Enrollment } from './pages/enrollment/Enrollment';
+import { Details } from './pages/details/Details';
+import { Maps } from './pages/maps/Maps';
+import { Sponsors } from './components/sponsors/Sponsors';
+import { AppFooter } from './components/footer/AppFooter';
 
 
 function App() {
-
-  
-
   // const dateTimeAfterThreeDays = NOW_IN_MS + DATE_IN_MS;
   //https://blog.greenroots.info/how-to-create-a-countdown-timer-using-react-hooks
-
-
-
 
   const [eventObj, setEventObj] = useState(null)
 
   useEffect(() => {
     getJsonFromApi()
-   
+
   }, [])
 
   const getJsonFromApi = async () => {
-    // const axios = require('axios');
-    // const res = await axios.get('https://www.4sport-live.com/miniSite/eventData/?comp=3432')
-    // console.log(res)
-
     //http://hinawi:3000/
     try {
       const response = await fetch('https://www.4sport-live.com/miniSite/eventData/?comp=3432');
@@ -49,13 +37,7 @@ function App() {
       console.error(error);
     }
   }
-  
-  // console.log('apiu',eventObj)
-  
   if (!eventObj) return
-  
-  
- 
 
   return (
     <BrowserRouter >
@@ -84,20 +66,12 @@ function App() {
           </div>
           <div className='right'></div>
         </main>
-        <Sponsers eventObj={eventObj}/>
+        <Sponsors eventObj={eventObj}/>
         <AppFooter/>
 
         {/* <AppFooter />
         <AppFooterMobile/> */}
       </div>
-
-      {/* <div className='counter-bc'>
-
-
-      </div> */}
-
-
-     
     </BrowserRouter>
 
 
