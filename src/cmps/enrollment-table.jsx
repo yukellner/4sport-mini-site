@@ -1,5 +1,4 @@
 import { Button } from "@mui/material"
-import { map } from "jquery"
 import { NavLink } from "react-router-dom"
 import { Sponsers } from "./sponsers"
 
