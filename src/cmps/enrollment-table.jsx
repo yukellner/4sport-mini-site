@@ -69,7 +69,7 @@ export const EnrollmentTable = ({ eventObj }) => {
                     <thead>
                         <tr>
                             <th>מגיל</th>
-                            <th>זמן זינוק</th>
+                            <th>זמן   זינוק</th>
                             <th>מקצה</th>
                         </tr>
                     </thead>
