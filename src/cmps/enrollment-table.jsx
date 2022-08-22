@@ -84,7 +84,7 @@ export const EnrollmentTable = ({ eventObj }) => {
                     </tbody>
                 </table>
             </div>
-            <div>
+            <div className="container">
                 <Button className="sign-btn" href={eventObj.participantsListUrl} variant="contained">לחץ להרשמה</Button>
             </div>
 
