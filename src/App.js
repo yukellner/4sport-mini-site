@@ -45,7 +45,7 @@ function App() {
         <Helmet>
           <meta charSet="utf-8" />
           <title>CityRace</title>
-          <link rel="canonical" href="https://staybnb-app.herokuapp.com" />
+          <link rel="canonical" href="https://www.4sport-live.com/static/minisite/build/" />
           <meta name="description" content="Vacation apartments rental" />
         </Helmet>
 

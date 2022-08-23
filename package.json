@@ -24,6 +24,7 @@
     "web-vitals": "^2.1.4",
     "workbox-background-sync": "^6.5.4",
     "workbox-broadcast-update": "^6.5.4",
+    "workbox-build": "^6.5.4",
     "workbox-cacheable-response": "^6.5.4",
     "workbox-core": "^6.5.4",
     "workbox-expiration": "^6.5.4",
@@ -58,5 +59,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yukellner/4sport-mini-site.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yukellner/4sport-mini-site/issues"
+  },
+  "description": ""
 }
