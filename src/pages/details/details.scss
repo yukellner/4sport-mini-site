@@ -1,0 +1,23 @@
+.main-details-container {
+    .first-img {
+        width: 50%;
+        padding: 10rem 1rem;
+
+        img {
+            width: 100%;
+            border-radius: 1rem;
+            /* aspect-ratio: 16/9; */
+            object-fit: cover;
+            height: 14rem
+        }
+    }
+
+    .seconed-img {
+        width: 100%;
+        background-color: var(--secondaryColor);
+        height: 14rem;
+        border-radius: 1rem;
+        margin-top: -13rem;
+        margin-left: 1rem
+    }
+}

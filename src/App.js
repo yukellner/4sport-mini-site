@@ -58,7 +58,7 @@ function App() {
             <Routes>
               <Route path='/contact' element={<Contact />} />
               <Route path='/enrollment/:description' element={<Enrollment eventObj={eventObj}/>} />
-              <Route path='/details' element={<Details />} />
+              <Route path='/details' element={<Details eventObj={eventObj}/>} />
               <Route path='/maps' element={<Maps />} />
               <Route path='/' element={<Home eventObj={eventObj}/>} />
             </Routes>
