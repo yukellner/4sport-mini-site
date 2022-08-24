@@ -1,40 +1,43 @@
-*{
+* {
+    // outline: 0.5px solid red !important;
     list-style-type: none;
     margin: 0;
     box-sizing: border-box;
     text-decoration: none;
-    a{
+
+    a {
         all: unset;
-        text-decoration: none; /* no underline */
+        text-decoration: none;
+        /* no underline */
 
     }
 
 }
 
-*{
+* {
     font-family: General-Font;
 }
 
-body{
+body {
     color: var(--fontColor);
 }
 
-.vh-80{
+.vh-80 {
     height: 80vh
-
 }
 
-.sign-btn{
+.sign-btn {
     margin-top: 5rem;
     background-color: var(--secondaryColor);
 }
-.sign-btn-oposite{
+
+.sign-btn-oposite {
     background-color: white !important;
     color: var(--secondaryColor) !important;
 
 }
 
-.titleText{
+.titleText {
     border-bottom: 1px solid rgb(221, 221, 221);
     text-align: center;
     margin: 4rem auto;

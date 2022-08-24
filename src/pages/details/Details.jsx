@@ -4,18 +4,20 @@ import { DetailsMainHeader } from "./details-cmp/DetailsMainHeader"
 // import { DetailsMainHeader } from "./details-cmp/DetailsMainHeader"
 
 
-export const Details = ({eventObj}) => {
+export const Details = ({ eventObj }) => {
 
-    
+
 
 
 
     return (
-        <div className="main-contact">
-            <HeaderTitle titleText={'מידע'}/>
-            <DetailsMainHeader eventObj={eventObj} />
-            <DetailsContent eventObj={eventObj}/>
-           
+        <div className="details-container">
+            <HeaderTitle titleText={'מידע'} />
+            <div className="content-container">
+                <DetailsMainHeader eventObj={eventObj} />
+                <DetailsContent eventObj={eventObj} />
+            </div>
+
 
         </div >
     )
