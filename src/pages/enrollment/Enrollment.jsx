@@ -8,11 +8,7 @@ export const Enrollment = ({ eventObj }) => {
     return (
         <div>
             <HeaderTitle titleText={'הרשמה'} />
-
-
             <EnrollmentTable eventObj={eventObj} />
-
-
         </div>
     )
 }
