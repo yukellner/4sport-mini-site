@@ -12,17 +12,10 @@
 }
 
 *{
-    
-    // outline: 0.5px solid red !important;
     font-family: General-Font;
-
-    // font-family: General-Font;
 }
 
 body{
-    // background-color: var(--backgroundColor);
-    // background-color: var(--secondaryColor);
-
     color: var(--fontColor);
 }
 
@@ -38,11 +31,12 @@ body{
 .sign-btn-oposite{
     background-color: white !important;
     color: var(--secondaryColor) !important;
-    // margin: 0.5rem !important;
 
 }
 
 .titleText{
     border-bottom: 1px solid rgb(221, 221, 221);
-
+    text-align: center;
+    margin: 4rem auto;
+    font-size: 1rem;
 }

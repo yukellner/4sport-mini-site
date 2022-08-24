@@ -1,13 +1,16 @@
-import {EnrollmentTable} from "./enrollment-table/EnrollmentTable";
+import { HeaderTitle } from "../../components/HeaderTitle";
+import { EnrollmentTable } from "./enrollment-table/EnrollmentTable";
 
 
-export const Enrollment = ({eventObj}) => {
+export const Enrollment = ({ eventObj }) => {
 
 
     return (
         <div>
+            <HeaderTitle titleText={'הרשמה'} />
 
-            <EnrollmentTable eventObj={eventObj}/>
+
+            <EnrollmentTable eventObj={eventObj} />
 
 
         </div>

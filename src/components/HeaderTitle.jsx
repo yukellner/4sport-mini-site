@@ -2,8 +2,7 @@
 
 export const HeaderTitle = ({titleText}) => {
 
-    useEffect(() => {
-    }, [])
+   
 
     return (
         <div className="titleText">

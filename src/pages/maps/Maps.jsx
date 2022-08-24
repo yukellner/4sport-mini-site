@@ -1,9 +1,12 @@
-export const Maps = ({eventObj}) => {
+import { HeaderTitle } from "../../components/HeaderTitle"
+
+export const Maps = ({ eventObj }) => {
 
 
     return (
         <div className="main-contact">
-            maps
+            <HeaderTitle titleText={'מפות'} />
+
         </div>
     )
 }

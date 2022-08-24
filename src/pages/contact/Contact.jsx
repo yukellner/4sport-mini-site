@@ -1,9 +1,12 @@
-export const Contact = ({eventObj}) => {
+import { HeaderTitle } from "../../components/HeaderTitle"
+
+export const Contact = ({ eventObj }) => {
 
 
     return (
         <div className="main-contact">
-            contact
+            <HeaderTitle titleText={'צור קשר'} />
+
 
 
         </div>
