@@ -6,7 +6,7 @@ export const EnrollmentCmp = ({eventObj}) => {
         <div className="main-enrollment vh-80">
             <h1>ההרשמה בעיצומה</h1>
             <h1>{eventObj.description}</h1>
-            <Button variant="contained">הרשמה</Button>
+            <Button className="button-border" variant="contained">הרשמה</Button>
 
         </div>
     )

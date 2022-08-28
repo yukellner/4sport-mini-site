@@ -1,4 +1,4 @@
-import { FormControl, FormControlLabel, FormLabel, Radio, RadioGroup, TextField } from "@mui/material"
+import { Button, FormControl, FormControlLabel, FormLabel, Radio, RadioGroup, TextField } from "@mui/material"
 import { useState } from "react"
 import { HeaderTitle } from "../../components/HeaderTitle"
 
@@ -51,7 +51,7 @@ export const Contact = ({ eventObj }) => {
                             <TextField onChange={(ev) => handleChange(ev)} id="outlined-basic" label="שם משפחה" name="lastName" variant="outlined" InputLabelProps={{ style: { color: '#222222' } }} />
                             <TextField onChange={(ev) => handleChange(ev)} id="outlined-basic" label="כתובת אימייל" name="email" variant="outlined" InputLabelProps={{ style: { color: '#222222' } }} />
 
-                            
+
                         </div>
 
                         <FormControl>
@@ -59,16 +59,13 @@ export const Contact = ({ eventObj }) => {
                             <RadioGroup onChange={(ev) => handleChange(ev)}
                                 name="roll"
                                 aria-labelledby="demo-radio-buttons-group-label"
-                                defaultValue="female"
-                                // name="radio-buttons-group"
-                                >
+                                defaultValue="female">
                                 {eventObj.heats.map(heat =>
                                     <FormControlLabel key={heat.description} value={heat.description} control={<Radio />} label={heat.description} />
                                 )}
                             </RadioGroup>
                         </FormControl>
-
-                        <button type="submit" className="btn btn-primary">Submit</button>
+                        <Button className="button-border" type="submit" variant="contained">שלח</Button>
                     </form>
                 </div>
             </div>
