@@ -1,22 +1,25 @@
 .main-details-container {
     .first-img {
         width: 100%;
-        padding: 2rem 1rem;
-
+        padding: 2rem 2rem 2rem 1rem;
+        height: 20rem;
+        margin-bottom: 5rem;
+        
         img {
+            height: 20rem;
             border-radius: 1rem;
             aspect-ratio: 16/9;
             object-fit: cover;
-            height: 14rem
+            width: 100%
         }
     }
 
     .seconed-img {
         width: 100%;
         background-color: var(--secondaryColor);
-        height: 14rem;
+        height: 20rem;
         border-radius: 1rem;
-        margin-top: -13rem;
+        margin-top: -19rem;
         margin-left: 1rem
     }
 }
@@ -29,7 +32,6 @@
     align-items: right;
     direction: rtl;
     padding: 1rem;
-    width: 50%;
 
 
     table {
@@ -54,8 +56,9 @@
 }
 
 .content-container {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
 }
 
 .categories{
