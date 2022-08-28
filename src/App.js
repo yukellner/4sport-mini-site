@@ -60,7 +60,7 @@ function App() {
               <Route path='/contact' element={<Contact eventObj={eventObj}/>} />
               <Route path='/enrollment/:description' element={<Enrollment eventObj={eventObj}/>} />
               <Route path='/details' element={<Details eventObj={eventObj}/>} />
-              <Route path='/maps' element={<Maps />} />
+              <Route path='/maps' element={<Maps eventObj={eventObj}/>} />
             </Routes>
             {/* <LoginSignup/> */}
           </div>

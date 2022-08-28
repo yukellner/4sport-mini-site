@@ -1,7 +1,22 @@
-import {Button} from "@mui/material"
+import { Button } from "@mui/material"
+import { useEffect, useState } from "react"
 
 
-export const HeatBox = ({heat, eventObj}) => {
+export const HeatBox = ({ heat, eventObj }) => {
+
+    const [raceType, setRaceType] = useState('race')
+
+
+
+
+    useEffect(() => {
+
+        setRaceType(eventObj.eventType)
+
+
+
+        // printJSON()
+    }, [])
 
 
     return (
@@ -19,10 +34,30 @@ export const HeatBox = ({heat, eventObj}) => {
                 </div>
                 <div className="heat-box">
                     <div>
-                        <span className="material-icons icon">
+
+                        {raceType == 'run' && <span className="material-icons icon">
                             directions_run
-                        </span>
+                        </span>}
+
+                        {raceType == 'swim' && <span className="material-icons icon">
+                            pool
+                        </span>}
+                        {raceType == 'bike' && <span className="material-icons icon">
+
+                            directions_bike
+
+                        </span>}
+                        {raceType == 'tri' &&
+                            <span className="material-icons icon">
+                                directions_run
+                            </span>}
                     </div>
+
+
+
+
+
+
 
                 </div>
             </div>
