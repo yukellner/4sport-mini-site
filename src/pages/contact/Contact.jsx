@@ -1,12 +1,39 @@
 import { FormControl, FormControlLabel, FormLabel, Radio, RadioGroup, TextField } from "@mui/material"
+import { useState } from "react"
 import { HeaderTitle } from "../../components/HeaderTitle"
 
 export const Contact = ({ eventObj }) => {
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        alert('submit')
+    const [newStay, setNewStay] = useState(
+        {
+            firstName: null,
+            lastName: null,
+            roll: null,
+            email: null,
+            competition: eventObj.description
+
+
+        })
+
+
+
+    const handleChange = (ev) => {
+        ev.preventDefault()
+        const field = ev.target.name
+        const value = ev.target.value
+        console.log(field)
+        console.log(value)
+        setNewStay({ ...newStay, [field]: value })
+
+        // alert('submit')
     }
+
+    const onSubmit = (ev) => {
+        ev.preventDefault()
+        console.log('state', newStay)
+    }
+
+
 
 
     return (
@@ -18,20 +45,23 @@ export const Contact = ({ eventObj }) => {
 
                 </div>
                 <div className="contact-form">
-                    <form id="contact-form" onSubmit={handleSubmit} method="POST">
+                    <form id="contact-form" onSubmit={onSubmit} method="POST">
                         <div className="form-group">
-                            <TextField id="filled-basic" label="שם פרטי" variant="filled" />
-                            <TextField id="filled-basic" label="שם משפחה" variant="filled" />
-                            <TextField id="filled-basic" label="כתובת אימייל" variant="filled" />
-                            <TextField id="filled-basic" label="מספר טלפון" variant="filled" />
+                            <TextField onChange={(ev) => handleChange(ev)} id="outlined-basic" label="שם פרטי" name="firstName" variant="outlined" InputLabelProps={{ style: { color: '#222222' } }} />
+                            <TextField onChange={(ev) => handleChange(ev)} id="outlined-basic" label="שם משפחה" name="lastName" variant="outlined" InputLabelProps={{ style: { color: '#222222' } }} />
+                            <TextField onChange={(ev) => handleChange(ev)} id="outlined-basic" label="כתובת אימייל" name="email" variant="outlined" InputLabelProps={{ style: { color: '#222222' } }} />
+
+                            
                         </div>
 
                         <FormControl>
                             <FormLabel id="demo-radio-buttons-group-label">מקצה</FormLabel>
-                            <RadioGroup
+                            <RadioGroup onChange={(ev) => handleChange(ev)}
+                                name="roll"
                                 aria-labelledby="demo-radio-buttons-group-label"
                                 defaultValue="female"
-                                name="radio-buttons-group">
+                                // name="radio-buttons-group"
+                                >
                                 {eventObj.heats.map(heat =>
                                     <FormControlLabel key={heat.description} value={heat.description} control={<Radio />} label={heat.description} />
                                 )}
